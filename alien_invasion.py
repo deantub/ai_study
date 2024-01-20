@@ -5,6 +5,7 @@ import pygame
 from settings import Settings
 from ship import Ship
 from bullet import Bullet
+from alien import Alien
 
 class AlienInvasion:
     """Загальний клас, що керує ресурсами та поведінкою гри"""
@@ -24,6 +25,15 @@ class AlienInvasion:
         
         self.ship = Ship(self)
         self.bullet = pygame.sprite.Group()
+        self.aliens = pygame.sprite.Group()
+
+        self._create_fleet()
+    
+    def _create_fleet(self):
+        """Створити флот прибульців."""
+        # Створити прибульця.
+        alien - Alien(self)
+        self.aliens.add(alien)
     
     def run_game(self):
         """Розпочати головний цикл гри"""
@@ -83,6 +93,8 @@ class AlienInvasion:
         self.ship.blitme()
         for bullet in self.bullets.sprites():
             bullet.draw_bullet()
+        self.aliens.draw(self.screen)
+        
         # Показати останній намальований екран.
         pygame.display.flip()
 
