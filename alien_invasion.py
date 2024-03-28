@@ -19,7 +19,7 @@ class AlienInvasion:
         pygame.init()
         self.settings = Settings()
         
-        self.screen = pygame.display.set_mode((self.setting.screen_width, self.setting.screen_heigth))
+        self.screen = pygame.display.set_mode((self.setting.screen_width, self.setting.screen_height))
         pygame.display.set_caption("Alien Invasion")
         
         # Створити екземпляр для збереження ігрової статистики та табло на екрані.
@@ -185,7 +185,7 @@ class AlienInvasion:
         """Реакція на зіткнення прибульця з кораблем"""
         if self.stats.ships_left > 0:
             # Зменшити ships_left та оновити табло.
-            self.stats.ship_left -= 1
+            self.stats.ships_left -= 1
             self.sb.prep_ships()
 
             # Позбавитися надлишку прибульців та куль.
