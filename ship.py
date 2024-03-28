@@ -29,7 +29,7 @@ class Ship(Sprite):
         """Оновити поточну позицію корабля на основі індикаторів руху."""
         # Оновити значення ship.x, а не rect.
         if self.moving_right and self.rect.right < self.screen_rect.right:
-            self.x += self.setting.ship_speed
+            self.x += self.settings.ship_speed
         if self.moving_left and self.rect.left > 0:
             self.x -= self.settings.ship_speed
         
