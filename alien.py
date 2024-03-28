@@ -15,7 +15,7 @@ class Alien(Sprite):
 
         # Зобразити кожного нового прибульця зверху зліва екрану.
         self.rect.x = self.rect.width
-        self.rect.y = self.rect.heigth
+        self.rect.y = self.rect.height
 
         # Розмістити прибульців в горизонтальному положенні.
         self.x = float(self.rect.x)
