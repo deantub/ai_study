@@ -17,3 +17,8 @@ class GameStats:
         self.ship_left = self.settings.ship_limit
         self.score = 0
         self.level = 1
+
+    def update_high_score(self):
+        """Оновлення рекорду."""
+        if self.score > self.high_score:
+            self.high_score = self.score
